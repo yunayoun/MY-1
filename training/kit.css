@@ -1,0 +1,111 @@
+:root {
+  --accent-color: #E5874A;
+}
+
+.container {
+  font-family: 'ChosunGu';
+  line-height: 180%;
+}
+
+.food-title {
+  margin-top: 100px;
+  margin-bottom: 30px;
+  color: var(--accent-color);
+  font-weight: 600px;
+}
+
+.kit-list,
+.snack-list,
+.bbq-list {
+  margin: 25px;
+}
+
+.kit-list a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+.snack-list span:hover,
+.bbq-list span:hover,
+.kit-list a:hover {
+  color: var(--accent-color);
+  font-weight: 600px;
+}
+
+.kit-list span {
+  margin: 8px 10px;
+  display: inline-block;
+
+}
+
+.kit-imgs,
+.bbq-imgs {
+  margin: 50px 0px;
+  padding-left: 0;
+
+}
+
+.kit-imgs li,
+.bbq-imgs li {
+  margin: 30px 0;
+  text-align: center;
+  list-style: none;
+}
+
+.kit-imgs li div,
+.bbq-imgs li div div:nth-child(2) {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.kit-imgs li>div,
+.bbq-imgs li>div {
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.kit-imgs li>div:hover,
+.kit-imgs .highlight {
+  box-shadow: 0px 0px 40px -10px lightgray;
+}
+
+.kit-imgs img,
+.bbq-imgs img {
+  width: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.snack-list span,
+.bbq-list span {
+  display: inline-block;
+  margin: 8px 10px;
+  color: black;
+  text-align: center;
+}
+
+.bbq-imgs li>div:hover,
+.bbq-imgs .highlight {
+  box-shadow: 0px 0px 40px -10px lightgray;
+}
+
+.bbq-info>div {
+  display: flex;
+  margin: 25px;
+  padding-top: 8px;
+}
+
+.bbq-info h5 {
+  margin-right: 50px;
+}
+
+.bbq-info ul>li {
+  margin-left: 70px;
+}
+
+.bbq-info ul>li {
+  list-style: none;
+}

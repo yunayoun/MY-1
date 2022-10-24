@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>food</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>    
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/acfe1c41fb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/static/css/navbar.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js">
+  </script>
+
+  <style>
+    :root {
+  --accent-color: #E5874A;
+}
+.container {
+  font-family: 'ChosunGu';
+  line-height: 180%;
+}
+
+.food-title {
+  margin-top: 100px;
+  margin-bottom: 30px;
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.kit-list,
+.snack-list,
+.bbq-list {
+  margin: 25px;
+}
+.bbq-list a,
+.kit-list a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+.snack-list span:hover,
+.bbq-list a:hover,
+.kit-list a:hover {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.kit-list span {
+  margin: 8px 10px;
+  display: inline-block;
+}
+
+.kit-imgs,
+.bbq-imgs {
+  margin: 50px 0px;
+  padding-left: 0;
+
+}
+
+.kit-imgs li,
+.bbq-imgs li {
+  margin: 30px 0;
+  text-align: center;
+  list-style: none;
+}
+
+.kit-imgs li div{
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-top: 15px;
+}
+.bbq-imgs li div div:nth-child(2) {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.kit-imgs li>div,
+.bbq-imgs li>div {
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.kit-imgs li>div:hover,
+.kit-imgs .highlight {
+  box-shadow: 0px 0px 40px -10px lightgray;
+}
+
+.kit-imgs img,
+.bbq-imgs img {
+  width: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.snack-list span,
+.bbq-list span {
+  display: inline-block;
+  margin: 8px 10px;
+  color: black;
+  text-align: center;
+}
+
+.bbq-imgs li>div:hover,
+.bbq-imgs .highlight {
+  box-shadow: 0px 0px 40px -10px lightgray;
+}
+
+.bbq-info>div {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px; 
+  padding-top: 8px;
+}
+
+.bbq-info h5 {
+  margin-right: 50px;
+}
+.bbq-guide1 ol{
+  margin-right: 620px;
+}
+.bbq-guide2 ol{
+  margin-right: 500px;
+}
+
+
+@media screen and (max-width:470px){
+  .bbq-info{
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+  </style>
+</head>
+<body>
+  
+  
+  <div class="container">
+    <h3 class="food-title">밀키트</h3>
+    <hr>
+    <div class="kit-list">
+      <span data-target="1"><a href="#11">소고기 밀푀유나베</a></span>
+      <span data-target="2"><a href="#22">우삼겹 떡볶이</a></span>
+      <span data-target="3"><a href="#33">마파두부</a></span>
+      <span data-target="4"><a href="#44">김치어묵 우동전골</a></span>
+      <span data-target="5"><a href="#55">트리플 크림파스타</a></span>
+      <span data-target="6"><a href="#66">샤브샤브</a></span>
+    </div>
+    <hr>
+    
+    <ul class="kit-imgs">
+      <div class="row">
+        <li class="col-12 col-md-6 col-xl-4">
+          <div data-source="1"id="11">
+            <img src="food/나베.jpg">
+            <div>소고기 밀푀유나베</div>
+          </div>
+        </li>
+        <li class="col-12 col-md-6 col-xl-4">
+          <div data-source="2"id="22">
+            <img src="food/나베.jpg">
+            <div>우삼겹 떡볶이</div>
+          </div>
+        </li>
+        <li class="col-12 col-md-6 col-xl-4">
+          <div data-source="3"id="33">
+            <img src="food/나베.jpg">
+            <div>마파두부</div>
+          </div>
+        </li>
+        <li class="col-12 col-md-6 col-xl-4">
+          <div data-source="4"id="44">
+            <img src="food/나베.jpg">
+            <div>김치어묵 우동전골</div>
+          </div>
+        </li>
+        <li class="col-12 col-md-6 col-xl-4">
+          <div data-source="5"id="55">
+            <img src="food/나베.jpg">
+            <div>트리플 크림파스타</div>
+          </div>
+        </li>
+        <li class="col-12 col-md-6 col-xl-4">
+          <div data-source="6"id="66">
+            <img src="food/나베.jpg">
+            <div>샤브샤브</div>
+          </div>
+        </li>
+      </div>
+    </ul> 
+    
+    <h3 class="food-title">매점</h3>
+    <hr>
+    <div class="snack-list">
+      <span>숟가락</span>
+      <span>젓가락</span>
+      <span>포크</span>
+      <span>접시</span>
+      <span>종이컵</span>
+      <span>부탄가스</span>
+      <span>이소가스</span>
+      <span>장작</span>
+      <span>라면</span>
+      <span>과자</span>
+      <span>쌈장</span>
+      <span>햇반</span>
+      <span>물</span>
+      <span>커피</span>
+      <span>술</span>
+      <span>탄산음료</span>
+      <span>얼음</span>
+    </div>
+    <hr>
+
+  <h3 class="food-title">바베큐</h3>
+  <hr>
+  <div class="bbq-list">
+    <span data-target="7"><a href="#77">바베큐 set</a></span>
+    <span data-target="7"><a href="#77">파이어 set</a></span>
+  </div>
+  <hr>
+    <ul class="bbq-imgs">
+        <div class="row">
+          <li class=" col-12 col-md-6 col-xl-4">
+              <div>
+                <div data-source="7"id="77">
+                  <img src="food/나베.jpg">
+                  <div>바베큐 set</div>
+                  <div>삼겹살500g 목살300g 소시지  <br>야채세트 김치 쌈장 햇반2개</div>
+                </div>
+              </div> 
+          </li>
+          <li class="col-12 col-md-6 col-xl-4">
+            <div>
+              <div data-source="7"id="77">
+                <img src="food/나베.jpg">
+                <div>파이어 set</div>
+                <div> 화롯대 숯 or 장작 <br>집게 일회용그릴 마시멜로</div>
+              </div>
+            </div> 
+          </li>
+      </div>
+  </ul>
+  <hr>
+    
+    <div class="bbq-info">
+      <h3 class="food-title">바베큐 이용 안내</h3>
+      <hr>
+      <div class="bbq-guide1">
+        <h5>이용료</h5>
+        <ol>
+          <li>바베큐 set  :  50000원</li>
+          <li>파이어 set  :  20000원</li>
+        </ol>
+      </div>
+      <hr>
+      <div class="bbq-guide2">
+        <h5>바베큐 주의사항</h5>
+        <ol>
+          <li>바베큐세트는 예약만 이용가능합니다.</li>
+          <li>숯과 장작은 1회 제공됩니다.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+<script>
+$(".kit-list>span").click(function(){
+    console.log($(this).data("target"));
+    $(".highlight").removeClass("highlight");
+    $(".kit-imgs li > div[data-source="+$(this).data("target")+"]").addClass("highlight");
+});
+$(".kit-imgs li>div").click(function(){
+    $(".highlight").removeClass("highlight");
+    $(this).addClass("highlight");
+});
+
+
+$(".bbq-list>span").click(function(){
+    console.log($(this).data("target"));
+    $(".highlight").removeClass("highlight");
+    $(".bbq-imgs li > div[data-source="+$(this).data("target")+"]").addClass("highlight");
+});
+$(".bbq-imgs li>div").click(function(){
+    $(".highlight").removeClass("highlight");
+    $(this).addClass("highlight");
+});
+  </script>
+
+</body>
+</html>
+
+
+  
+  
+
+
+              

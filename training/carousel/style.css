@@ -1,0 +1,53 @@
+.container {
+  width: 600px;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+}
+.album {
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+}
+.images {
+  position: relative;
+  display: flex;
+  height: 400px;
+  /* 에니메이션효과-동작의시작과끝과시간차) */
+  transition: transform 0.9s;
+}
+img {
+  width: 600px;
+  height: 400px;
+}
+button,
+button:active,
+button:focus {
+  width:50px;
+  height: 40px;
+  border: none;
+  color: black;
+  outline: none;
+  border-radius: 50px;
+}
+button:hover {
+  background-color: burlywood;
+  color:black;
+}
+/* button:disabled {
+  color: red;
+} */
+
+.carouseltitle{
+  display: inline-block;
+  font-size: 30px;
+  margin-right: 50px;
+  margin-left: 50px;
+
+}
+.carousel{
+text-align: center;
+margin-top: 15px;
+
+}

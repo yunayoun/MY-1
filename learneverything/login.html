@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="login-box">
+      <h1>배움터</h1>
+      <p>아이디</p>
+      <input class="login-id" type="text" maxlength="10" />
+      <p>비밀번호</p>
+      <input class="login-pass" type="password" maxlength="12" />
+      <input type="submit" onclick="member()" value="로그인" />
+      <a href="#"> 회원가입</a><br />
+      <a href="#"> 아이디/비밀번호 찾기</a>
+    </div>
+
+    <script>
+      const member = () => {
+        var loginid = document.querySelector(".login-id").value;
+        var loginpass = document.querySelector(".login-pass").value;
+
+        if (loginid == "aaaa" && loginpass == "1111") {
+          alert("로그인성공");
+          location.href = "boot.html";
+        } else {
+          alert("로그인실패");
+          document.querySelector(".login-id").value = "";
+          document.querySelector(".login-pass").value = "";
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="boot.css" />
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg" style="background-color:#f8d7da;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">배움터</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="page-ex1.html">배움터란</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="boot.html">수강목록</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="page-ex2.html">수강신청</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">로그인
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active item1">
+          <img class="d-block w-100" alt="" />
+          <div class="helper"></div>
+          <div class="intro">
+            <h1></h1>
+            <div class="js-clock">
+              <h1>00:00</h1>
+              <h2>당신의 인생에서 가장 젊은날은 오늘입니다.</h2>
+              <h3>나의 젊은날, 무엇이든 해보세요..</h3>
+            </div>
+          </div>
+          
+        </div>
+        <div class="carousel-item item2">
+          <img class="d-block w-100" alt="" />
+          <div class="helper"></div>
+          <div class="intro">
+            <h2>제빵 배우기</h2>
+            <a href="#">
+              <button type="button" class="btn btn-light">
+                알아보기
+              </button></a
+            >
+          </div>
+        </div>
+        <div class="carousel-item item3">
+          <img class="d-block w-100" alt="" />
+          <div class="helper"></div>
+          <div class="intro">
+            <h2>피아노 배우기</h2>
+            <a href="#"
+              ><button type="button" class="btn btn-light">
+                알아보기
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong>첫 수강신청 회원분들에게 10%의 할인권을 드립니다!</strong>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+      <div class="container d-flex">
+        <div class="card">
+          <a href="#"><img src="img/cooking.jpg" class="card-img-top" alt="" />
+          <div class="card-body">
+            <h5 class="card-title">맛있는 빵 만들기</h5>
+            <img class="userimg" src="img/user.jpg"><span>홍길동</span>
+          </a>
+          </div>
+        </div>
+        <div class="card">
+          <a href="#"><img src="img/swim.jpg" class="card-img-top" alt="" />
+          <div class="card-body">
+            <h5 class="card-title">수영 배우기</h5>
+            <img class="userimg" src="img/user.jpg"><span>김강동</span>
+          </a>
+          </div>
+        </div>
+        <div class="card">
+          <a href="#"><img src="img/climbing.jpg" class="card-img-top" alt="" />
+          <div class="card-body">
+            <h5 class="card-title">클라이밍 배우기</h5>
+            <img class="userimg" src="img/user.jpg"><span>한철주</span>
+          </a>
+          </div>
+        </div>
+        <div class="card">
+          <a href="#"><img src="img/piano1.jpg" class="card-img-top" alt="" />
+          <div class="card-body">
+            <h5 class="card-title">피아노 한곡 배우기</h5>
+            <img class="userimg" src="img/user.jpg"><span>박영희</span>
+          </a>
+          </div>
+        </div>
+        <div class="card">
+          <a href="#"><img src="img/pocketball.jpg" class="card-img-top" alt="" />
+          <div class="card-body">
+            <h5 class="card-title">포켓볼 배우기</h5>
+            <img class="userimg" src="img/user.jpg"><span>서희수</span>
+          </a>
+          </div>
+        </div>
+        <div class="card">
+          <a href="#"><img src="img/tango.jpg" class="card-img-top" alt="" />
+          <div class="card-body">
+            <h5 class="card-title">스포츠댄스 배우기</h5>
+            <img class="userimg" src="img/user.jpg"><span>최수영</span>
+          </a>
+          </div>
+        </div>
+        <div class="card">
+          <a href="#"><img src="img/guitar.jpg" class="card-img-top" alt="" />
+          <div class="card-body">
+            <h5 class="card-title">기타 배우기</h5>
+            <img class="userimg" src="img/user.jpg"><span>윤복희</span>
+          </a>
+          </div>
+        </div>
+        <div class="card">
+          <a href="#"><img src="img/knitting.jpg" class="card-img-top" alt="" />
+          <div class="card-body">
+            <h5 class="card-title">뜨개질 가방 만들기</h5>
+            <img class="userimg" src="img/user.jpg"><span>주경래</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+
+  const clockContainer = document.querySelector(".js-clock"),
+    clockTitle = clockContainer.querySelector("h1");
+  
+  function getTime() {
+    const date = new Date();
+
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+
+    const minutes = date.getMinutes();
+    const hours = date.getHours();
+    const seconds = date.getSeconds();
+    clockTitle.innerText =
+     `${year}년${month <10 ? `0${month}`: month}월${day<10 ?`0${day}`:day}일${hours < 10 ? `0${hours}` : hours}시${
+      minutes < 10 ? `0${minutes}` : minutes
+      }분${seconds < 10 ? `0${seconds}` : seconds}초`;
+  }
+  function init() {
+    getTime();
+    setInterval(getTime, 1000);
+  }
+  init();
+</script>
+
+</body>
+</html>
+
+
+    
+    
+      
+      
+      
+      
+    
+
+
+      
+
+     
+
+
+
+
+
+      
+     
+     
+  
+    
+     
+
+

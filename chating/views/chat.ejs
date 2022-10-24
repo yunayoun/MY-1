@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="/public/chat.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.socket.io/4.5.0/socket.io.min.js"
+      integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="app">
+      <div class="screen join-screen active">
+        <div class="form">
+          <h2>Join room</h2>
+          <div class="form-input">
+            <label>user name</label>
+            <input type="text" id="username" />
+          </div>
+          <div class="form-input">
+            <button id="join-user" onclick="enterChat();">Join</button>
+          </div>
+        </div>
+      </div>
+      <div class="screen chat-screen">
+        <div class="header">
+          <div class="logo">room</div>
+          <button id="exit-chat" onclick="exit();">Exit</button>
+        </div>
+        <div class="messages" id="msgBox">
+          <!-- messages -->
+          <!-- <div class="message my-message">
+        <div>
+          <div class="name">you</div>
+          <div class="text">hi</div>
+        </div>
+      </div>
+      <div class="update">abc 입장햇어</div>
+      <div class="message other-message">
+        <div>
+          <div class="name">abc</div>
+          <div class="text">hi</div>
+        </div>
+      </div>-->
+        </div>
+        <div class="typebox">
+          <select id="dm">
+            <option value="all">전체</option>
+          </select>
+          <input type="text" id="message-input" />
+          <button id="send-message" onclick="MsgSend()">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var enter = document.getElementById("message-input");
+      enter.addEventListener("keypress", function (e) {
+        if (e.keyCode === 13) {
+          MsgSend();
+        }
+      });
+
+      var socket = io.connect();
+
+      function enterChat() {
+        var nickname = $("#username").val();
+
+        // if(nickname.length == 0){
+        //   return;
+        // }
+        socket.emit("new-user", nickname);
+        // $('.join-screen').removeClass('active');
+        // $('.chat-screen').addClass('active');
+
+        //위에인풋창이있는경우 클릭이안되게
+        // input태크에
+        // readonly -사용자입력안되고 자바스크립트에서도 가능
+        // disabled- 사용자.자바스크립 둘다 입력불가
+        // $('인풋태그명','버튼태그명').attr('disabled',true);
+      }
+
+      const exit = () => {
+        $(".join-screen").addClass("active");
+        $(".chat-screen").removeClass("active");
+        $("#username").val("");
+      };
+
+      socket.on("update", (nickname) => {
+        $(".messages").append(
+          ` <div class="update">${nickname}  입장하셨습니다.</div>`
+        );
+      });
+
+      function MsgSend() {
+        var msg = $("#message-input").val();
+        // $("#message-input").val("");
+        var data = {
+          dm: $("#dm").val(),
+          msg: msg,
+        };
+        socket.emit("sending", data);
+      }
+
+      socket.on("send", (msg) => {
+        var myMsg = $("#message-input").val();
+        var className = "";
+
+        if (myMsg == msg) className = "message my-message";
+        else className = "message other-message";
+        $("#message-input").val("");
+        let chatScreen = document.getElementById("msgBox");
+        chatScreen.scrollTo(0, chatScreen.scrollHeight);
+        $(".messages").append(`
+        <div class="${className}">
+        <div>${msg}</div>
+        </div>`);
+      });
+
+      // 클라이언쪽은 무조건 socket.어쩌고 io는 없어
+
+      socket.on("err", (msg) => {
+        alert(msg);
+      });
+      socket.on("success", (msg) => {
+        $(".join-screen").removeClass("active");
+        $(".chat-screen").addClass("active");
+      });
+
+      socket.on("clientUpdate", (client) => {
+        /* client = {
+                    111: "aaaa",
+                    222: "bbbb"
+                } */
+        var option = `<option value="all">전체</option>`;
+        for (var key in client) {
+          /*
+                    key = "111"
+                    client[key] = "aaaa";
+                    key = "222";
+                    client[key] = "bbbb";
+                    */
+          if (client[key] != $("#username").val()) {
+            option += `<option value="${key}">${client[key]}</option>`;
+          }
+        }
+        $("#dm").html(option);
+      });
+    </script>
+  </body>
+</html>
