@@ -1,12 +1,12 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
   background-color: #9b4dcb;
 }
@@ -17,15 +17,16 @@ body {
   color: #fff;
   text-align: center;
   padding: 2rem;
+  /* position   전체적으로 줘서 반응할수있게 */
 }
 .word-display {
   font-size: 50px;
   font-weight: 600;
   color: #38006b;
-  margin-top: 3rem;
+  margin-top: 9rem;
 }
 .word-input-box {
-  margin-top: 3rem;
+  margin-top: 5rem;
 
 }
 .word-input {
@@ -55,8 +56,9 @@ button {
   font-size: 30px;
   border: none;
   border-radius: 50% 50% 0 0;
-  margin-top: 3rem;
   cursor: pointer;
+  position: absolute;
+  bottom:0;
 }
 .loading {
   border-radius: 50% 50% 0 0;

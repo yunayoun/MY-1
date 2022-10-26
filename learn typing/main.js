@@ -33,6 +33,7 @@ function run() {
 
 function checkStatus() {
   if (!isPlaying && time === 0) {
+    wordInput.value ="";
     buttonChange("게임시작");
     clearInterval(checkInterval);
   }
